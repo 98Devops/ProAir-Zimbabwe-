@@ -53,10 +53,13 @@ function initMobileMenu() {
     // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            navLinks.classList.remove('open');
-            if (overlay) overlay.classList.remove('active');
-            document.body.style.overflow = '';
+            // Delay closing to ensure the browser registers the navigation
+            setTimeout(() => {
+                toggle.classList.remove('active');
+                navLinks.classList.remove('open');
+                if (overlay) overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }, 200);
         });
     });
 }
