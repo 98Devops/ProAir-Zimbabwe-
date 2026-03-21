@@ -161,11 +161,16 @@ function initTiltCards() {
 
 // ---- Cool Air Particle System ----
 function initParticles() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
+    // Run on both homepage hero and inner page-hero sections
+    const heroSections = document.querySelectorAll('.hero, .page-hero');
+    if (!heroSections.length) return;
 
+    heroSections.forEach(hero => createParticleSystem(hero));
+}
+
+function createParticleSystem(hero) {
     const canvas = document.createElement('canvas');
-    canvas.id = 'hero-particles';
+    canvas.style.cssText = 'position:absolute;inset:0;z-index:1;pointer-events:none;';
     hero.appendChild(canvas);
 
     const ctx = canvas.getContext('2d');
@@ -224,8 +229,12 @@ function initParticles() {
         }
     }
 
-    // Create particles
-    const count = Math.min(60, Math.floor(canvas.width / 20));
+    // Fewer particles on smaller page-hero sections
+    const isPageHero = hero.classList.contains('page-hero');
+    const count = isPageHero
+        ? Math.min(35, Math.floor(canvas.width / 30))
+        : Math.min(60, Math.floor(canvas.width / 20));
+
     for (let i = 0; i < count; i++) {
         particles.push(new Particle());
     }
