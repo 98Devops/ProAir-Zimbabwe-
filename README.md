@@ -1,3 +1,5 @@
+![ProAir Zimbabwe Banner](assets/images/banner.png)
+
 # ProAir Zimbabwe — Business Website
 
 > Air conditioning, heating, ventilation & portable climate solutions for car, home, office and events in Harare, Zimbabwe.
