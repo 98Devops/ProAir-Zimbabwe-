@@ -1,0 +1,20 @@
+{
+  "name": "proair-zw",
+  "version": "1.0.0",
+  "description": "ProAir Zimbabwe - Make The Weather Behave. Air conditioning, heating, ventilation and refrigeration services in Harare, Zimbabwe.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:pbt": "vitest --run --reporter=verbose"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "fast-check": "^4.6.0",
+    "vite": "^5.4.0",
+    "vitest": "^4.1.0"
+  }
+}
