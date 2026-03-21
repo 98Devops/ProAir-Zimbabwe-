@@ -5,7 +5,7 @@
 
 // WhatsApp number for receiving enquiries
 // TEST NUMBER — change to 263779840840 or 263717840840 for production
-const WHATSAPP_NUMBER = '263781426361';
+const WHATSAPP_NUMBER = '263779840840';
 
 document.addEventListener('DOMContentLoaded', () => {
     initContactForm();

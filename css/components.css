@@ -83,7 +83,7 @@
 /* ---- Navbar ---- */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 36px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -97,6 +97,7 @@
     backdrop-filter: blur(12px);
     box-shadow: var(--shadow-md);
     padding: var(--space-sm) 0;
+    top: 0;
 }
 
 .navbar .container {
@@ -266,9 +267,27 @@
         z-index: 999;
     }
 
+    .navbar {
+        top: 68px; /* account for wrapped phone strip */
+    }
+    
+    .navbar.scrolled {
+        top: 0;
+    }
+
     .mobile-overlay.active {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        top: 100px; /* account for multiple lines in phone strip */
+    }
+    
+    .navbar.scrolled {
+        top: 0;
     }
 }
 
