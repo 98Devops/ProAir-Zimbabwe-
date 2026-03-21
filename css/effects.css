@@ -1,0 +1,279 @@
+/* ============================================
+   ProAir Zimbabwe — Floating WhatsApp Button
+   ============================================ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    transition: gap 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    gap: 10px;
+}
+
+.whatsapp-float-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: wa-pulse 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+
+.whatsapp-float-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+.whatsapp-float-tooltip {
+    background: var(--dark, #1e293b);
+    color: #fff;
+    font-family: var(--font-heading, 'Outfit', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.whatsapp-float:hover .whatsapp-float-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes wa-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0.1);
+    }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary, #1a56db), var(--accent, #e31b23));
+    z-index: 10000;
+    transition: width 0.05s linear;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Button Ripple Effect */
+.btn-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(0);
+    animation: ripple-expand 0.6s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes ripple-expand {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: var(--white, #fff);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.page-transition-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+}
+
+.page-transition-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: spin-loader 1s linear infinite;
+}
+
+@keyframes spin-loader {
+    to { transform: rotate(360deg); }
+}
+
+/* Weather Widget */
+.weather-widget {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-family: var(--font-heading, 'Outfit', sans-serif);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    animation: fadeIn 1s 0.5s both ease;
+    transition: all 0.3s ease;
+}
+
+.weather-widget:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.weather-temp {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.weather-icon {
+    font-size: 1.2rem;
+}
+
+/* Particle Canvas */
+#hero-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Enhanced Reveal Animations */
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.clip-reveal-left {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clip-reveal-left.revealed {
+    clip-path: inset(0 0 0 0);
+}
+
+.clip-reveal-right {
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clip-reveal-right.revealed {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Tilt Card Glare */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+}
+
+.tilt-card .tilt-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tilt-card:hover .tilt-glare {
+    opacity: 1;
+}
+
+/* Typing cursor */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: var(--accent, #e31b23);
+    margin-left: 2px;
+    animation: cursor-blink 0.7s step-end infinite;
+    vertical-align: text-bottom;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Magnetic button hover */
+.btn-magnetic {
+    transition: transform 0.2s ease-out;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float-btn {
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-float-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .whatsapp-float-tooltip {
+        display: none;
+    }
+
+    .weather-widget {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+    }
+}
