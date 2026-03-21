@@ -5,14 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirects for SPA-like behavior (optional, good for clean URLs)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# Cache static assets
+# Cache static assets for performance
 [[headers]]
   for = "/assets/*"
   [headers.values]
