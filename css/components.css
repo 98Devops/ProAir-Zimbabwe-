@@ -406,9 +406,11 @@
 .footer-qr a {
     display: block;
     flex-shrink: 0;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     overflow: hidden;
     transition: transform 0.3s ease;
+    background: #ffffff;
+    padding: 10px;
 }
 
 .footer-qr a:hover {
@@ -419,9 +421,9 @@
     display: block;
     width: 120px;
     height: 120px;
-    border-radius: var(--radius-sm);
-    background: #fff;
-    padding: 6px;
+    border-radius: 0;
+    background: #ffffff;
+    padding: 0;
 }
 
 .footer-qr span {
