@@ -387,9 +387,14 @@ class MessageFormatter {
      * @returns {string} Fallback lead ID
      */
     static _generateFallbackLeadId(timestamp) {
-        const date = timestamp.toISOString().slice(0, 10).replace(/-/g, '');
-        const time = timestamp.getTime().toString().slice(-4);
-        return `PA-${date}-${time}`;
+        // Build from date parts rather than slicing toISOString(): years outside
+        // 1000-9999 serialize in expanded form (e.g. "+010000-01-01") and would
+        // leak a sign into the PA-XXXXXXXX-XXXX reference format.
+        const year = String(Math.abs(timestamp.getUTCFullYear())).padStart(4, '0').slice(-4);
+        const month = String(timestamp.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(timestamp.getUTCDate()).padStart(2, '0');
+        const time = String(Math.abs(timestamp.getTime())).slice(-4);
+        return `PA-${year}${month}${day}-${time}`;
     }
 }
 
