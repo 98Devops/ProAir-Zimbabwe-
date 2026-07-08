@@ -308,6 +308,7 @@
 
 .footer-brand img {
     height: 55px;
+    width: auto;
     margin-bottom: var(--space-md);
 }
 
