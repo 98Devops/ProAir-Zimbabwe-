@@ -2,9 +2,6 @@
    ProAir Zimbabwe — Design System
    ============================================ */
 
-/* ---- Google Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
-
 /* ---- CSS Custom Properties ---- */
 :root {
   /* Brand Colors */
@@ -285,7 +282,7 @@ p {
 }
 
 /* Scroll-triggered animation classes */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity var(--duration-slow) var(--ease-out),
@@ -297,7 +294,7 @@ p {
   transform: translateY(0);
 }
 
-.reveal-left {
+.js .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
   transition: opacity var(--duration-slow) var(--ease-out),
@@ -309,7 +306,7 @@ p {
   transform: translateX(0);
 }
 
-.reveal-right {
+.js .reveal-right {
   opacity: 0;
   transform: translateX(40px);
   transition: opacity var(--duration-slow) var(--ease-out),
@@ -322,7 +319,7 @@ p {
 }
 
 /* Stagger children */
-.stagger-children > * {
+.js .stagger-children > * {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity var(--duration-normal) var(--ease-out),
@@ -347,4 +344,30 @@ p {
   .section { padding: var(--space-3xl) 0; }
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .container { padding: 0 var(--space-md); }
+}
+
+/* ---- Premium typography touches ---- */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* ---- Reduced motion: keep everything readable, skip animation ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

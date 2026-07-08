@@ -501,31 +501,29 @@
     transform: scaleX(1);
 }
 
+/* Flyer-style pictogram tile: white with royal-blue border (#16339c from brand flyer) */
 .service-card-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: var(--radius-md);
-    background: var(--primary-light);
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    background: var(--white);
+    border: 3px solid #16339c;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: var(--space-lg);
-    transition: all var(--duration-normal) var(--ease-out);
+    transition: transform var(--duration-normal) var(--ease-out),
+        box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .service-card:hover .service-card-icon {
-    background: var(--primary);
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 24px -8px rgba(22, 51, 156, 0.45);
 }
 
 .service-card-icon svg {
-    width: 28px;
-    height: 28px;
-    color: var(--primary);
-    transition: color var(--duration-normal) var(--ease-out);
-}
-
-.service-card:hover .service-card-icon svg {
-    color: var(--white);
+    width: 46px;
+    height: 46px;
 }
 
 .service-card h3 {

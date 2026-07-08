@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script>document.documentElement.classList.add('js')</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air Conditioning Services Harare | ProAir Zimbabwe | Installation, Repair, Hire</title>
@@ -17,6 +18,10 @@
     <meta property="og:image" content="./assets/images/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="./assets/images/logo.jpg">
+  <!-- Fonts (preconnect + non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/services.css">
@@ -92,7 +97,7 @@
     <!-- Navbar -->
     <nav class="navbar scrolled" id="navbar">
         <div class="container">
-            <a href="index.html" class="navbar-logo"><img src="./assets/images/logo.jpg" alt="ProAir Zimbabwe Logo"></a>
+            <a href="index.html" class="navbar-logo"><img src="./assets/images/logo-nav.jpg" alt="ProAir Zimbabwe Logo" width="212" height="120" decoding="async"></a>
             <div class="navbar-links" id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -109,7 +114,8 @@
                     </svg>
                     0779 840 840
                 </a>
-                <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20your%20services." target="_blank" class="btn btn-primary btn-sm">💬 Get a Quote</a>
+                <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20your%20services."
+                    target="_blank" class="btn btn-primary btn-sm">Get a Quote</a>
             </div>
             <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
         </div>
@@ -118,16 +124,28 @@
 
     <main>
         <!-- Page Hero -->
-        <section class="page-hero">
+        <section class="page-hero page-hero-services">
             <div class="container">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span class="separator">/</span>
-                    <span>Services</span>
+                <div class="page-hero-grid">
+                    <div class="page-hero-text">
+                        <div class="breadcrumb">
+                            <a href="index.html">Home</a>
+                            <span class="separator">/</span>
+                            <span>Services</span>
+                        </div>
+                        <h1>Our Services</h1>
+                        <p>Expert air conditioning, heating, ventilation and portable climate solutions for car, home,
+                            office and events across Zimbabwe.</p>
+                    </div>
+                    <div class="page-hero-visual">
+                        <picture>
+                            <source srcset="./assets/images/services-banner.webp" type="image/webp">
+                            <img src="./assets/images/services-banner.jpg"
+                                alt="ProAir Zimbabwe technician installing an air conditioner — sales, installation, repair, maintenance, relocation and service"
+                                width="1238" height="1242" fetchpriority="high" decoding="async">
+                        </picture>
+                    </div>
                 </div>
-                <h1>Our Services</h1>
-                <p>Expert air conditioning, heating, ventilation and portable climate solutions for car, home, office
-                    and events across Zimbabwe.</p>
             </div>
         </section>
 
@@ -156,8 +174,13 @@
 
                     <!-- Car A/C -->
                     <div class="service-detail reveal" id="car-ac">
-                        <div class="service-detail-visual">
-                            <img src="./assets/images/services/Car AC.jpg" alt="ProAir Zimbabwe car air conditioning regas and service" loading="lazy">
+                        <div class="service-detail-visual service-detail-visual--graphic">
+                            <picture>
+                                <source srcset="./assets/images/services/car-ac-regassing.webp" type="image/webp">
+                                <img src="./assets/images/services/car-ac-regassing.jpg"
+                                    alt="ProAir Zimbabwe car A/C regassing — diagnosis, leak repairs and filter replacements with 12 months warranty"
+                                    width="1000" height="1008" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="service-detail-content">
                             <h3>Car A/C Regas &amp; Service</h3>
@@ -198,14 +221,20 @@
                                     Fleet service options available
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Car%20A%2FC%20Regas%20%26%20Service." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Car%20A%2FC%20Regas%20%26%20Service."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
 
                     <!-- Home Heating & Cooling -->
                     <div class="service-detail reveal" id="home-ac">
-                        <div class="service-detail-visual">
-                            <img src="./assets/images/services/Home Heating & Cooling.jpg" alt="ProAir Zimbabwe home heating and cooling installation" loading="lazy">
+                        <div class="service-detail-visual service-detail-visual--graphic">
+                            <picture>
+                                <source srcset="./assets/images/services/aircon-servicing.webp" type="image/webp">
+                                <img src="./assets/images/services/aircon-servicing.jpg"
+                                    alt="ProAir Zimbabwe technician servicing an air conditioning unit — sales, service and maintenance"
+                                    width="1000" height="1004" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="service-detail-content">
                             <h3>Home Heating &amp; Cooling</h3>
@@ -245,14 +274,17 @@
                                     Ongoing maintenance plans available
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Home%20Heating%20%26%20Cooling." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Home%20Heating%20%26%20Cooling."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
 
                     <!-- Office Climate Control -->
                     <div class="service-detail reveal" id="office-ac">
                         <div class="service-detail-visual">
-                            <img src="./assets/images/services/Office Climate Control.jpg" alt="ProAir Zimbabwe office and commercial climate control" loading="lazy">
+                            <img src="./assets/images/services/Office Climate Control.jpg"
+                                alt="ProAir Zimbabwe office and commercial climate control" width="1000" height="747"
+                                loading="lazy" decoding="async">
                         </div>
                         <div class="service-detail-content">
                             <h3>Office Climate Control</h3>
@@ -292,14 +324,20 @@
                                     Maintenance contract options
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Office%20Climate%20Control." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Office%20Climate%20Control."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
 
                     <!-- Portable A/C for Hire -->
                     <div class="service-detail reveal" id="portable-ac">
-                        <div class="service-detail-visual">
-                            <img src="./assets/images/services/Portable AC.jpg" alt="ProAir Zimbabwe portable air conditioning hire for events" loading="lazy">
+                        <div class="service-detail-visual service-detail-visual--graphic">
+                            <picture>
+                                <source srcset="./assets/images/services/portable-ac-hire.webp" type="image/webp">
+                                <img src="./assets/images/services/portable-ac-hire.jpg"
+                                    alt="ProAir Zimbabwe portable air conditioners available for hire — easy installation, energy efficient, versatile and mobile"
+                                    width="1000" height="1003" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="service-detail-content">
                             <h3>Portable A/C for Hire</h3>
@@ -339,14 +377,20 @@
                                     Range of unit sizes for any venue
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Portable%20A%2FC%20Hire." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Portable%20A%2FC%20Hire."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
 
                     <!-- Gas Heaters for Hire -->
                     <div class="service-detail reveal" id="gas-heaters">
-                        <div class="service-detail-visual">
-                            <img src="./assets/images/services/Gas Heater Hire.jpg" alt="ProAir Zimbabwe gas heater hire for events and restaurants" loading="lazy">
+                        <div class="service-detail-visual service-detail-visual--graphic">
+                            <picture>
+                                <source srcset="./assets/images/services/gas-heater-hire.webp" type="image/webp">
+                                <img src="./assets/images/services/gas-heater-hire.jpg"
+                                    alt="ProAir Zimbabwe patio gas heaters for hire — only $60, comes with a full gas tank"
+                                    width="752" height="953" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="service-detail-content">
                             <h3>Gas Heaters for Hire</h3>
@@ -386,7 +430,8 @@
                                     Ideal for events, restaurants, patios
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Gas%20Heaters%20for%20Hire." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Gas%20Heaters%20for%20Hire."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -408,7 +453,9 @@
                     <!-- Whirlybird Installation -->
                     <div class="service-detail reveal" id="whirlybird">
                         <div class="service-detail-visual">
-                            <img src="./assets/images/services/Whirlybird.jpg" alt="ProAir Zimbabwe whirlybird roof ventilator installation" loading="lazy">
+                            <img src="./assets/images/services/Whirlybird.jpg"
+                                alt="ProAir Zimbabwe whirlybird roof ventilator installation" width="1000"
+                                height="747" loading="lazy" decoding="async">
                         </div>
                         <div class="service-detail-content">
                             <h3>Whirlybird Installation</h3>
@@ -449,14 +496,20 @@
                                     Professional roof installation and sealing
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Whirlybird%20Installation." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Whirlybird%20Installation."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
 
                     <!-- Extractor Fan Installation -->
                     <div class="service-detail reveal" id="extractor">
                         <div class="service-detail-visual">
-                            <img src="./assets/images/services/Extractor Fan.jpg" alt="ProAir Zimbabwe extractor fan installation for kitchens and bathrooms" loading="lazy">
+                            <picture>
+                                <source srcset="./assets/images/services/extractor-fan.webp" type="image/webp">
+                                <img src="./assets/images/services/extractor-fan.jpg"
+                                    alt="ProAir Zimbabwe extractor fan installed in a modern bathroom ceiling"
+                                    width="1000" height="750" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="service-detail-content">
                             <h3>Extractor Fan Installation</h3>
@@ -496,7 +549,8 @@
                                     Kitchen, bathroom, industrial and commercial options
                                 </li>
                             </ul>
-                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Extractor%20Fan%20Installation." target="_blank" class="btn btn-primary">💬 Get a Quote</a>
+                            <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20Extractor%20Fan%20Installation."
+                                target="_blank" class="btn btn-primary">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -512,7 +566,8 @@
                     perfect climate solution for your needs.</p>
                 <div class="reveal"
                     style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-                    <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20a%20free%20quote%20for%20air%20conditioning%20services." target="_blank" class="btn btn-primary btn-lg">💬 Get a Free Quote</a>
+                    <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20a%20free%20quote%20for%20air%20conditioning%20services."
+                        target="_blank" class="btn btn-primary btn-lg">Get a Free Quote</a>
                     <a href="tel:+263779840840" class="btn btn-outline-white btn-lg">Call 0779 840 840</a>
                 </div>
             </div>
@@ -524,7 +579,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="./assets/images/logo.jpg" alt="ProAir Zimbabwe">
+                    <img src="./assets/images/logo-nav.jpg" alt="ProAir Zimbabwe" width="212" height="120" loading="lazy" decoding="async">
                     <p>Affordable air conditioning, heating, ventilation and refrigeration services in Harare and across
                         Zimbabwe.</p>
                     <div class="footer-social">
@@ -542,8 +597,13 @@
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                             </svg></a>
-                        <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe!" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -601,10 +661,14 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe!" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+    <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe!" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-float">
         <span class="whatsapp-float-tooltip">Chat with us</span>
         <div class="whatsapp-float-btn">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
         </div>
     </a>
 

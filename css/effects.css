@@ -181,7 +181,7 @@
 }
 
 /* Enhanced Reveal Animations */
-.reveal-scale {
+.js .reveal-scale {
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -192,7 +192,7 @@
     transform: scale(1);
 }
 
-.clip-reveal-left {
+.js .clip-reveal-left {
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -201,7 +201,7 @@
     clip-path: inset(0 0 0 0);
 }
 
-.clip-reveal-right {
+.js .clip-reveal-right {
     clip-path: inset(0 0 0 100%);
     transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }

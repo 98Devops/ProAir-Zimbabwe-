@@ -23,4 +23,7 @@ export default defineConfig({
   server: {
     open: true,
   },
+  test: {
+    exclude: ['**/node_modules/**', 'css/tafara-portfolio/**', 'dist/**'],
+  },
 });

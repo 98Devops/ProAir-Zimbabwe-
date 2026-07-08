@@ -2,6 +2,78 @@
    ProAir Zimbabwe — Services Page Styles
    ============================================ */
 
+/* Services page hero with brand banner */
+.page-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.page-hero-visual {
+    position: relative;
+    max-width: 420px;
+    justify-self: end;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 24px 48px -12px rgba(4, 12, 38, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: rotate(1.5deg);
+    transition: transform var(--duration-slow) var(--ease-out),
+        box-shadow var(--duration-slow) var(--ease-out);
+    animation: heroVisualIn 0.9s var(--ease-out) both;
+}
+
+.page-hero-visual:hover {
+    transform: rotate(0deg) translateY(-6px);
+    box-shadow: 0 32px 64px -12px rgba(4, 12, 38, 0.65);
+}
+
+.page-hero-visual picture,
+.page-hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes heroVisualIn {
+    from {
+        opacity: 0;
+        transform: rotate(1.5deg) translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(1.5deg) translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .page-hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .page-hero-visual {
+        justify-self: center;
+        max-width: 360px;
+        transform: none;
+        animation-name: heroVisualInFlat;
+    }
+}
+
+@keyframes heroVisualInFlat {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .services-category {
     margin-bottom: var(--space-4xl);
 }
@@ -73,10 +145,33 @@
     justify-content: center;
 }
 
+.service-detail-visual picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .service-detail-visual img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.service-detail:hover .service-detail-visual img {
+    transform: scale(1.03);
+}
+
+/* Square brand graphics — never crop the artwork text */
+.service-detail-visual--graphic {
+    aspect-ratio: 1/1;
+    max-width: 460px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-100);
+}
+
+.service-detail-visual--graphic img {
+    object-fit: contain;
 }
 
 .service-detail-visual .service-icon-large {
@@ -130,5 +225,10 @@
 
     .service-detail-visual {
         aspect-ratio: 16/9;
+    }
+
+    .service-detail-visual--graphic {
+        aspect-ratio: 1/1;
+        max-width: 100%;
     }
 }

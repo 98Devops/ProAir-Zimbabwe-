@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProAir Zimbabwe | Air Conditioning Harare | Make The Weather Behave</title>
@@ -27,6 +28,10 @@
   <link rel="icon" type="image/jpeg" href="./assets/images/logo.jpg">
 
   <!-- Stylesheets -->
+  <!-- Fonts (preconnect + non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/components.css">
   <link rel="stylesheet" href="./css/home.css">
@@ -106,7 +111,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">
-        <img src="./assets/images/logo.jpg" alt="ProAir Zimbabwe Logo">
+        <img src="./assets/images/logo-nav.jpg" alt="ProAir Zimbabwe Logo" width="212" height="120" decoding="async">
       </a>
       <div class="navbar-links" id="nav-links">
         <a href="index.html" class="active">Home</a>
@@ -125,7 +130,7 @@
           0779 840 840
         </a>
         <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20your%20services."
-          target="_blank" class="btn btn-primary btn-sm">💬 Get a Quote</a>
+          target="_blank" class="btn btn-primary btn-sm">Get a Quote</a>
       </div>
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
@@ -197,6 +202,15 @@
             </a>
           </div>
         </div>
+
+        <div class="hero-visual">
+          <picture>
+            <source srcset="./assets/images/home-showcase.webp" type="image/webp">
+            <img src="./assets/images/home-showcase.jpg"
+              alt="ProAir Zimbabwe branded service fleet — distance is not a barrier, we come right where you are"
+              width="1000" height="1003" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
       </div>
     </section>
 
@@ -205,11 +219,11 @@
       <div class="container">
         <div class="stats-grid reveal stagger-children">
           <div class="stat-item">
-            <div class="stat-number">10<span class="accent">+</span></div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-number">Est. <span class="accent">2012</span></div>
+            <div class="stat-label">Established</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">5K<span class="accent">+</span></div>
+            <div class="stat-number">50<span class="accent">K+</span></div>
             <div class="stat-label">Installations Done</div>
           </div>
           <div class="stat-item">
@@ -240,15 +254,7 @@
 
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17m-2 0a2 2 0 1 0 4 0 2 2 0 1 0 -4 0" />
-                <path d="M17 17m-2 0a2 2 0 1 0 4 0 2 2 0 1 0 -4 0" />
-                <path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0H9" />
-                <path d="M10 5l1.5-2.5" />
-                <path d="M13.5 2.5L15 5" />
-                <path d="M12 1v1" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><path fill="#16339c" d="M3.6 10.6l2.6-.5 2.5-3.2c.4-.5 1-.8 1.6-.8h4.6c.6 0 1.2.3 1.6.7l3 3.3 1.9.5c.8.2 1.4 1 1.4 1.8v2.1c0 .7-.6 1.3-1.3 1.3h-1.4a2.7 2.7 0 0 1-5.3 0H9.2a2.7 2.7 0 0 1-5.3 0H2.6c-.7 0-1.2-.5-1.2-1.2v-2.1c0-.9.6-1.7 1.4-1.9z"/><path fill="#fff" d="M9.9 7.4h2v2.7H7.6l1.6-2.3c.2-.2.4-.4.7-.4z"/><path fill="#fff" d="M13 7.4h1.6c.3 0 .5.1.7.3l2.1 2.4H13z"/><circle cx="6.6" cy="15.8" r="1.5" fill="#fff"/><circle cx="6.6" cy="15.8" r=".6" fill="#16339c"/><circle cx="17.4" cy="15.8" r="1.5" fill="#fff"/><circle cx="17.4" cy="15.8" r=".6" fill="#16339c"/></svg>
             </div>
             <h3>Car A/C Regas &amp; Service</h3>
             <p>Diagnose, regas and repair vehicle air conditioning so drivers stay cool in Zimbabwean heat.</p>
@@ -262,13 +268,10 @@
             </a>
           </div>
 
+
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><path fill="#16339c" d="M12 2.4 22.5 10.6l-1.3 1.7-1.7-1.3V20c0 .6-.5 1-1 1H5.5c-.5 0-1-.4-1-1v-9l-1.7 1.3-1.3-1.7 3.3-2.6V4.2h2.9v1.6z"/><rect x="10.2" y="14.2" width="3.6" height="6.8" rx=".4" fill="#fff"/><rect x="6.2" y="12" width="2.7" height="2.7" fill="#fff"/><rect x="15.1" y="12" width="2.7" height="2.7" fill="#fff"/></svg>
             </div>
             <h3>Home Heating &amp; Cooling</h3>
             <p>Supply and install energy-efficient units for bedrooms and lounges that both cool and heat.</p>
@@ -282,18 +285,10 @@
             </a>
           </div>
 
+
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                <path d="M10 6h4" />
-                <path d="M10 10h4" />
-                <path d="M10 14h4" />
-                <path d="M10 18h4" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><rect x="2.4" y="9" width="6" height="12.5" fill="#16339c"/><rect x="8.9" y="2.8" width="8.2" height="18.7" fill="#16339c"/><rect x="17.6" y="11" width="4" height="10.5" fill="#16339c"/><g fill="#fff"><rect x="3.7" y="10.5" width="1.3" height="1.3"/><rect x="5.9" y="10.5" width="1.3" height="1.3"/><rect x="3.7" y="13" width="1.3" height="1.3"/><rect x="5.9" y="13" width="1.3" height="1.3"/><rect x="3.7" y="15.5" width="1.3" height="1.3"/><rect x="5.9" y="15.5" width="1.3" height="1.3"/><rect x="3.7" y="18" width="1.3" height="1.3"/><rect x="5.9" y="18" width="1.3" height="1.3"/></g><g fill="#fff"><rect x="10.5" y="4.5" width="1.4" height="1.4"/><rect x="12.8" y="4.5" width="1.4" height="1.4"/><rect x="15.1" y="4.5" width="1.4" height="1.4"/><rect x="10.5" y="7.2" width="1.4" height="1.4"/><rect x="12.8" y="7.2" width="1.4" height="1.4"/><rect x="15.1" y="7.2" width="1.4" height="1.4"/><rect x="10.5" y="9.9" width="1.4" height="1.4"/><rect x="12.8" y="9.9" width="1.4" height="1.4"/><rect x="15.1" y="9.9" width="1.4" height="1.4"/><rect x="10.5" y="12.6" width="1.4" height="1.4"/><rect x="12.8" y="12.6" width="1.4" height="1.4"/><rect x="15.1" y="12.6" width="1.4" height="1.4"/><rect x="10.5" y="15.3" width="1.4" height="1.4"/><rect x="12.8" y="15.3" width="1.4" height="1.4"/><rect x="15.1" y="15.3" width="1.4" height="1.4"/><rect x="12.2" y="18.2" width="1.6" height="3.3"/></g><g fill="#fff"><rect x="18.7" y="12.6" width="1.8" height="1.2"/><rect x="18.7" y="15" width="1.8" height="1.2"/><rect x="18.7" y="17.4" width="1.8" height="1.2"/></g></svg>
             </div>
             <h3>Office Climate Control</h3>
             <p>Air conditioning and ventilation for offices, shops, restaurants, churches and workplaces.</p>
@@ -307,15 +302,10 @@
             </a>
           </div>
 
+
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
-                <path d="M18 14h-8" />
-                <path d="M15 18h-5" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><rect x="6.8" y="2.4" width="10.4" height="19.2" rx="1.8" fill="#16339c"/><rect x="8.8" y="4.4" width="6.4" height="2.6" rx=".5" fill="#fff"/><circle cx="12" cy="14" r="3.6" fill="#fff"/><circle cx="12" cy="14" r="1.2" fill="#16339c"/><g fill="#16339c"><circle cx="12" cy="11.4" r=".45"/><circle cx="14.3" cy="12.7" r=".45"/><circle cx="14.3" cy="15.3" r=".45"/><circle cx="12" cy="16.6" r=".45"/><circle cx="9.7" cy="15.3" r=".45"/><circle cx="9.7" cy="12.7" r=".45"/></g></svg>
             </div>
             <h3>Portable A/C for Hire</h3>
             <p>Short-term portable aircon rental for weddings, conferences, events, tents and marquees.</p>
@@ -329,13 +319,10 @@
             </a>
           </div>
 
+
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><path fill="#16339c" d="M4.3 7.4c0-2.9 3.5-5.1 7.7-5.1s7.7 2.2 7.7 5.1z"/><rect x="8.6" y="7.9" width="6.8" height="3.6" rx=".9" fill="#16339c"/><g stroke="#fff" stroke-width=".95" stroke-linecap="round"><path d="M10.3 8.9v1.6"/><path d="M12 8.9v1.6"/><path d="M13.7 8.9v1.6"/></g><rect x="11" y="11.5" width="2" height="7.4" fill="#16339c"/><path fill="#16339c" d="M12 17.6c2.5 0 4.5 1.2 4.5 2.7 0 .4-.3.7-.7.7H8.2c-.4 0-.7-.3-.7-.7 0-1.5 2-2.7 4.5-2.7z"/></svg>
             </div>
             <h3>Gas Heaters for Hire</h3>
             <p>Gas heater rentals for outdoor and indoor events, restaurants and emergency heating.</p>
@@ -348,6 +335,7 @@
               </svg>
             </a>
           </div>
+
         </div>
 
         <!-- Ventilation & Air Quality -->
@@ -356,12 +344,7 @@
 
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3Z" />
-                <path d="M17 4a6.5 6.5 0 0 1 1.087 5.567" />
-                <path d="m21 7-1.5 1.5" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><circle cx="12" cy="8.8" r="6.6" fill="#16339c"/><g stroke="#fff" stroke-width="1.05" fill="none" stroke-linecap="round"><path d="M9.2 3.1c-1.5 3.6-1.5 7.8 0 11.4"/><path d="M12 2.3v13"/><path d="M14.8 3.1c1.5 3.6 1.5 7.8 0 11.4"/><path d="M5.6 6.6c3.8 1.5 9 1.5 12.8 0"/><path d="M5.6 11c3.8 1.5 9 1.5 12.8 0"/></g><path fill="#16339c" d="M9.5 15 8.3 18.5h7.4L14.5 15z"/><rect x="5.3" y="18.5" width="13.4" height="2.6" rx=".7" fill="#16339c"/></svg>
             </div>
             <h3>Whirlybird Installation</h3>
             <p>Roof turbine ventilators to remove hot air and improve comfort without heavy electricity use.</p>
@@ -375,13 +358,10 @@
             </a>
           </div>
 
+
           <div class="service-card">
             <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v10" />
-                <path d="M18.4 6.6a9 9 0 1 1-12.77.04" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="2.4" fill="#16339c"/><circle cx="12" cy="12" r="7.4" fill="#fff"/><g fill="#16339c"><path d="M12 12c-.5-2.9.7-5.3 3.2-6.1.9 2.4-.2 4.9-3.2 6.1z"/><path d="M12 12c2.9-.5 5.3.7 6.1 3.2-2.4.9-4.9-.2-6.1-3.2z"/><path d="M12 12c.5 2.9-.7 5.3-3.2 6.1-.9-2.4.2-4.9 3.2-6.1z"/><path d="M12 12c-2.9.5-5.3-.7-6.1-3.2 2.4-.9 4.9.2 6.1 3.2z"/><circle cx="12" cy="12" r="1.5"/></g><g fill="#fff"><circle cx="4.4" cy="4.4" r=".8"/><circle cx="19.6" cy="4.4" r=".8"/><circle cx="4.4" cy="19.6" r=".8"/><circle cx="19.6" cy="19.6" r=".8"/></g></svg>
             </div>
             <h3>Extractor Fan Installation</h3>
             <p>Kitchen, bathroom, industrial and commercial extractor fans to remove heat, smoke and smells.</p>
@@ -394,6 +374,7 @@
               </svg>
             </a>
           </div>
+
         </div>
       </div>
     </section>
@@ -417,7 +398,7 @@
               </svg>
             </div>
             <h4>Trusted &amp; Reliable</h4>
-            <p>Over a decade of trusted aircon installation and servicing in Zimbabwe.</p>
+            <p>Established in 2012 — trusted aircon installation and servicing across Zimbabwe.</p>
           </div>
           <div class="feature-card">
             <div class="feature-card-icon">
@@ -511,7 +492,7 @@
           Zimbabwe.</p>
         <div class="reveal" style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
           <a href="https://wa.me/263779840840?text=Hi%20ProAir%20Zimbabwe%2C%20I%27d%20like%20a%20free%20quote%20for%20air%20conditioning%20services."
-            target="_blank" class="btn btn-primary btn-lg">💬 Get a Free Quote</a>
+            target="_blank" class="btn btn-primary btn-lg">Get a Free Quote</a>
           <a href="services.html" class="btn btn-outline-white btn-lg">Explore Services</a>
         </div>
       </div>
@@ -523,7 +504,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="./assets/images/logo.jpg" alt="ProAir Zimbabwe">
+          <img src="./assets/images/logo-nav.jpg" alt="ProAir Zimbabwe" width="212" height="120" loading="lazy" decoding="async">
           <p>Affordable air conditioning, heating, ventilation and refrigeration services in Harare and across Zimbabwe.
             Make the weather behave!</p>
           <div class="footer-social">

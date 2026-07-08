@@ -5,15 +5,20 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     initScrollProgress();
-    initCounterAnimation();
-    initTiltCards();
-    initParticles();
     initWeatherWidget();
-    initTypingEffect();
-    initButtonRipple();
-    initMagneticButtons();
     initEnhancedReveals();
+
+    if (!reducedMotion) {
+        initCounterAnimation();
+        initTiltCards();
+        initParticles();
+        initTypingEffect();
+        initButtonRipple();
+        initMagneticButtons();
+    }
 });
 
 // ---- Scroll Progress Bar ----
